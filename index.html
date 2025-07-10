@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern HTML CSS JS Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Interactive Web Elements</h1>
+    <p>Task 2 - Intermediate HTML, CSS & JavaScript</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- Contact Form -->
+    <section class="card">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Responsive Layout -->
+    <section class="card">
+      <h2>Responsive Layout</h2>
+      <div class="responsive-box">
+        <nav>Navbar</nav>
+        <main>Main Area</main>
+        <aside>Sidebar</aside>
+        <footer>Footer</footer>
+      </div>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="card">
+      <h2>To-Do List</h2>
+      <div class="form-group">
+        <input type="text" id="taskInput" placeholder="Enter a task..." />
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

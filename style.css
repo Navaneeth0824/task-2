@@ -1,0 +1,144 @@
+:root {
+  --primary: #0077b6;
+  --secondary: #023e8a;
+  --bg: #f9f9f9;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+ul#taskList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+ul#taskList li {
+  background: #e3f2fd;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+ul#taskList li button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Responsive Layout Area */
+.responsive-box {
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "main aside"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+.responsive-box nav {
+  grid-area: nav;
+  background: #0077b6;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.responsive-box main {
+  grid-area: main;
+  background: #caf0f8;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.responsive-box aside {
+  grid-area: aside;
+  background: #90e0ef;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.responsive-box footer {
+  grid-area: footer;
+  background: #0077b6;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
+  .responsive-box {
+    grid-template-areas:
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
